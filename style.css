@@ -23,9 +23,11 @@ body {
     display: flex;
     flex-direction: column;
     background-image: url(images/island-hlavicka.jpg);
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     height: 100%;
-    min-width: 320px;
+    /* min-width: 320px; */
 }
 .titulek {
     font-family: 'Raleway', serif;
@@ -89,6 +91,17 @@ a {
 p .strong {
     font-weight: 500px;
 } 
+
+.img {  /*  NEJSEM SCHOPNÁ TU FOTKU NASTAVIT TAK, ABY BYLA MAX NA ŠÍŘKU NA DISPLEJE*/
+    display: inline-block;
+    flex-basis: 100%;
+    flex-direction: start;
+    /* background-image: url(image/island1.jpg);
+    background-size: cover; */
+    position: center; 
+    max-width: 400px;
+}
+
 /* FOTOGALERIE */
 .foto {
     display: flex;
@@ -97,11 +110,7 @@ p .strong {
     width: 100%;
     height: 100%; */
 }
-.img {
-    display: flex;
-    flex-basis: 100%;
-    flex-direction: column;
-}
+
 .galerie .popisek {
     font-weight: bolder;
 }
@@ -131,5 +140,97 @@ span {
 li {
  display: inline-block; /* nefunguje mi - proč? */
 }
-.galerie
+
+.foto {
+    flex-direction: row;
+    width: 50%;
+    flex-wrap: wrap;
+    /* background-image: url(images/nahled1.jpg); */
+    background-size: cover;
+    background-position: center;
+}
+/* .nahled2 {
+    flex-direction: row;
+    width: 50%;
+    flex-wrap: wrap;
+    background-image: url(images/nahled2.jpg);
+    background-size: cover;
+    background-position: center;
+}  */
+}
+@media (min-width:1000px) {
+.titulek {
+    font-size: 60px;
+    margin:50px;
+}
+.hlavicka {
+    position: relative;
+    
+} 
+.perex {
+    margin: 50px 250px 50px 250px;
+} 
+.autor {
+    position: relative;
+    bottom: 30px;
+}
+.kontejner {
+    margin: -50px 0 0 0;
+    background: white;
+    position: relative;
+    right: 150px;
+    left:150px; 
+    height: 100%;
+    max-width: 960px;
+}
+.uvod {
+    padding: 5px 0 0 0px;
+    width:70%;
+    float: right;
+}
+.menu {
+    /* position: absolute;
+    left:50px;
+    top: 150px; */
+    width: 30%;
+    margin: 20 20px 100px 20px;
+    background: white;
+    float:left;
+a # { 
+/*chci zapsat že tyhle odkazy mjí jinou barvu, protože jména u fotek jsou taky odkazy a ty jsou v PC bílé (uvnitř fotek) */
+    color:lightgrey;
+}
+
+/* TADY ODSUD MÁM POCIT, ŽE MI TO NEDĚLÁ NIC... ??? */
+
+.img .popisek { /*abych to viděla :-) mám to červeně*/
+    text-align: right;
+    color: red;
+    position: relative;
+    margin: 15px 15px 15px 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+a {
+    color: red;
+    margin: 0;
+}
+.co-videt {
+    /* background-color: white; */
+    width: 70%;
+    margin-left:30%;
+}
+.foto {
+    display: flex;
+    flex-direction: row;
+    width:30%;
+    flex-wrap: wrap;
+}
+.paticka {
+    margin: 0 0 0 150px;
+    
+}
+
+.paticka p {
+    text-align: center;
+} 
 }
