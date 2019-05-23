@@ -49,6 +49,14 @@ body {
     text-align: center;
 }
 
+.kontejner { 
+    margin-left: auto;
+    margin-right: auto;
+    background: white; 
+    position: relative; 
+    height: 100%;
+}
+
 /* MENU */
 .menu {
     color: grey;
@@ -86,12 +94,43 @@ h2 {
 p {
     margin: 30px 15px 30px 15px;
 }
-.popisek {
+
+.island-obrazek1{
+    position: relative;
+}
+.popisek1 {
     text-align: center;
     color: lightgrey;
+    margin: 0; 
+    padding: 10px;
+}
+.popisek1 a {
+    color:lightgrey;
+}
+.island-obrazek2 {
     position: relative;
-    margin: 15px 15px 15px 15px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.popisek2 {
+    text-align: center;
+    color: lightgrey;
+    margin: 0; 
+    padding: 10px;
+}
+.popisek2 a {
+    color:lightgrey;
+}
+
+.island-obrazek3 {
+    position: relative;
+}
+.popisek3 {
+    text-align: center;
+    color: lightgrey;
+    margin: 0; 
+    padding: 10px;
+}
+.popisek3 a {
+    color: lightgrey;
 }
 
 a {
@@ -107,8 +146,8 @@ img {  /*  NEJSEM SCHOPNÁ TU FOTKU NASTAVIT TAK, ABY BYLA MAX NA ŠÍŘKU NA DI
     display: inline-block;
     flex-basis: 100%;
     flex-direction: start;
-    /* background-image: url(image/island1.jpg);
-    background-size: cover; */
+    /* background-image: url(image/island1.jpg);*/
+    background-size: cover;
     position: center; 
     max-width: 100%;
 }
@@ -168,17 +207,66 @@ span {
 }
 .foto { /* nedaří se mi zbavit mezery mezi fotkami, taky nerozumím, 
     proč se mi to nezarovná z kraje do kraje*/
-    display: block;
+    display: row;
     /* flex-direction: start; 
     flex-wrap: wrap; TOTO JSOU VLASTNOSTI RODIČE*/
-    margin-bottom:-7px; 
+    /* margin-bottom:-7px;  */
     /* background-size: cover; */
     /* position: center;  */
     /* overflow: hidden; */
-    max-width: 100%;
-    max-height: 232px;
-    
+    width: 100%;
+    height: 225px; 
+    max-width: 480px;
+    margin: 0;
+    padding:0;
+    /* position: relative; */
 }
+
+}
+.island-obrazek1{
+    position: relative;
+}
+.popisek1 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: whitesmoke;
+    margin: 0;
+    padding: 10px;
+}
+.popisek1 a {
+    color:white;
+}
+.island-obrazek2 {
+    position: relative;
+}
+.popisek2 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: whitesmoke;
+    margin: 0;
+    padding: 10px;
+}
+.popisek2 a {
+    color:white;
+}
+
+.island-obrazek3 {
+    position: relative;
+}
+.popisek3 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: whitesmoke;
+    margin: 0;
+    padding: 10px;
+}
+.popisek3 a {
+    color:white;
+}
+
 .popisek {
     margin: 0;
 }
@@ -209,7 +297,7 @@ span {
 .foto:hover .popisek {
     /* zmena v tride popisek, jenom v třídě fota, na kterou jsem zrovna najela myší*/
      display: block;
-     transform: translate(0, -130%); /*(-100% v tomto případě znamená : transformuj se na celou SVOU velikost, první nula pak udává posuny do stran)*/
+     transform: translate(0, -100%); /*(-100% v tomto případě znamená : transformuj se na celou SVOU velikost, první nula pak udává posuny do stran)*/
      transition: 0.5s;
     } 
 
@@ -218,8 +306,14 @@ span {
     /* width: 100%; */
     display: block;
     color: black;
-}    
+}   
+.paticka {
+    background-color:transparent;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 /* ------------------------------------------------------------- */
 @media (min-width:1000px) {
 .kontejner {
@@ -262,14 +356,36 @@ span {
     /* line-height: 50px; */  
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;   
 }
+/* .menu {
+    color: grey;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+} */
 
-.li {
-    display: block;
+li {  
+    list-style-type: none;
+    border:none;
+    width: 100%;
+    padding: 10px;
+    flex-wrap:wrap;
+    padding: 10px;
+    margin: 10 px;
+    border-bottom: 1px solid lightgrey;
+    text-align: left;
+}
+/* .li {
+    /* display: block; *
     border: none;
     /* list-style-type: none; */
-    /* flex-wrap: wrap; */
-    width:100%;
-}
+    /* flex-wrap: wrap; *
+    width: 100%;
+} */
 
 .uvod {
     display:block;
@@ -334,19 +450,32 @@ span {
 .popisek3 a {
     color:white;
 }
-/* .galerie{
+.galerie{
+    width: 960px;
+    margin: 0;
+    padding: 0;
+    /* position: relative;  */
+
+}
+.foto {
+    height: 180px;
+    width: 320px;
+    margin: 0;
+    padding:0;
+    /* position: relative; */
+}
+
+.foto:hover .popisek {
+    /* zmena v tride popisek, jenom v třídě fota, na kterou jsem zrovna najela myší*/
+     display: block;
+     transform: translate(0, -100%); /*(-100% v tomto případě znamená : transformuj se na celou SVOU velikost, první nula pak udává posuny do stran)*/
+     transition: 0.5s;
+    } 
+
+.paticka {
+    background-color:transparent;
     max-width: 960px;
     margin-left: auto;
     margin-right: auto;
-    position: relative; */
-}
-.foto {
-    max-height: 225px;
-  
-}
-
-.paticka {
-    background-color:none;
-    margin-left: 30px;
 }
 }
