@@ -222,7 +222,6 @@ span {
     /* position: relative; */
 }
 
-}
 .island-obrazek1{
     position: relative;
 }
@@ -279,7 +278,8 @@ span {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  */
     background-color: rgba(255, 255, 255, 0.5);
     color: black;
-    padding: 0;     
+    padding: 0;  
+    text-align: center;   
 }
 /* .island-obrazek1 {
     background-image: src(images/island1);
